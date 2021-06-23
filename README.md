@@ -1,4 +1,4 @@
-<h1>
+<h1 align="center">
   <img alt="letmeask" title="letmeask" src="./src/assets/images/logoLetmeask.png" />
 </h1>
 
