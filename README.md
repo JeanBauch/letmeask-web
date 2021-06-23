@@ -1,5 +1,5 @@
 <h1>
-  <img alt="letmeask" title="letmeask" src="./src/assets/image/logo.svg" />
+  <img alt="letmeask" title="letmeask" src="./src/assets/images/logoLetmeask.png" />
 </h1>
 
 <p align="center">
@@ -18,8 +18,8 @@
 
 ## Features
 
-<img alt="letmeask" title="letmeask" src="./src/assets/image/github01.png" />
-<img alt="letmeask" title="letmeask" src="./src/assets/image/github02.png" />
+<img alt="letmeask" title="letmeask" src="src/assets/images/github01.png" />
+<img alt="letmeask" title="letmeask" src="src/assets/images/github02.png" />
 
 - [x] Tela de Login com o google/auth firebase
 - [x] Tela de criação da sala após auth.
