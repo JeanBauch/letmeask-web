@@ -4,6 +4,7 @@ import { useAuth } from '../hooks/useAuth';
 import { useRoom } from '../hooks/useRoom';
 import { Button } from '../components/Button';
 import { RoomCode } from '../components/RoomCode';
+import { ToggleSwitch } from '../components/ToggleSwitch/index';
 import { Question } from '../components/Question/index';
 import { database } from '../services/firebase';
 
@@ -64,7 +65,10 @@ export function Room() {
       <header>
         <div className="content">
           <img src={logoImg} alt="" />
-          <RoomCode code={roomId}/>
+          <div>
+            <ToggleSwitch />
+            <RoomCode code={roomId}/>
+          </div>
         </div>
       </header>
 
