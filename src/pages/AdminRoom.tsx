@@ -1,17 +1,20 @@
 import { useHistory, useParams } from 'react-router-dom';
 // import { useAuth } from '../hooks/useAuth';
 import { useRoom } from '../hooks/useRoom';
-import { Button } from '../components/Button';
-import { RoomCode } from '../components/RoomCode';
+import { Button } from '../components/Button/Button';
+import { RoomCode } from '../components/RoomCode/RoomCode';
 import { Question } from '../components/Question/index';
+import { ToggleTheme } from '../components/ToggleTheme/index';
 
 import logoImg from '../assets/images/logo.svg';
 import deleteImg from '../assets/images/delete.svg';
 import checkImg from '../assets/images/check.svg';
 import answerImg from '../assets/images/answer.svg';
+import { database } from '../services/firebase';
+import { useTheme } from '../hooks/useTheme';
 
 import '../styles/room.scss';
-import { database } from '../services/firebase';
+import cx from 'classnames';
 
 type RoomParams = {
   id: string;
@@ -23,6 +26,7 @@ export function AdminRoom() {
   const history = useHistory();
   const roomId = params.id;
   const { title, questions } = useRoom(roomId);
+  const { theme } = useTheme();
 
   async function handleEndRoom() {
     await database.ref(`rooms/${roomId}`).update({
@@ -52,12 +56,15 @@ export function AdminRoom() {
 
   return (
     <div id="page-room">
-      <header>
+      <header className={cx(
+        { dark: theme==='dark' }
+      )}>
         <div className="content">
           <img src={logoImg} alt="" />
-          <div >
+          <div>
+            <ToggleTheme />
             <RoomCode code={roomId}/>
-            <Button isOutline onClick={handleEndRoom}>Encerrar sala</Button>
+            <Button isOutline isDark={theme==='dark'} onClick={handleEndRoom}>Encerrar sala</Button>
           </div>
         </div>
       </header>

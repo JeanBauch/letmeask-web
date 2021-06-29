@@ -20,7 +20,30 @@
   &.answered {
     background: #DBDCDD;
   }
+  
+  &.dark {
+    background: #1a1233;
+    transition: all 0.25s linear;
+    p {
+      color: #fefefe;
+    }
+    footer {
+      .user-info {
+        span {
+          color: #fefefe;
+        }
+      }
+    }
+  }
 
+  &.highlightedDark {
+    background: #4f3698;
+  }
+
+  &.answeredDark {
+    background: #0d0919;
+  }
+  
   p {
     color: #29292e;
   }

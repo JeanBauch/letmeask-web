@@ -9,6 +9,13 @@
 
   display: flex;
 
+  &.dark {
+    background: #271b4c;
+    span {
+      color: #FFF;
+    }
+  }
+
   div {
     height: 100%;
     background: #835afd;
@@ -26,5 +33,18 @@
     width: 230px;
     font-size: 14px;
     font-weight: 500;
+  }
+}
+
+@media (max-width: 768px) {
+  .room-code {
+    div {
+      img {
+        align-self: center;
+      }
+    }
+    span {
+      display: none;
+    }
   }
 }

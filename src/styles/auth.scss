@@ -140,3 +140,48 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  #page-auth {
+    flex-direction: column;
+
+    aside {
+      padding: 60px 40px;
+      
+      img{
+        max-width: 160px;
+        align-self: center;
+      }
+  
+      strong{
+        font: 700 16px 'Poppins', sans-serif;
+        line-height: 24px;
+        margin-top: 16px;
+      }
+  
+      p{
+        font-size: 16px;
+        line-height: 18px;
+        margin-top: 16px;
+      }
+    }
+
+    main {
+      //padding: 30px;
+      display: flex;
+      flex-direction: column;
+      &::before{
+        content: "";
+        position: relative;
+        background-color: transparent;
+        width: 0;
+        height: 0;
+        border-top: (50px) solid #835afd;
+        border-left: (100vw) solid transparent;
+      }
+      .main-content {
+        padding: 30px 15px 60px;
+      }
+    }
+  }
+}

@@ -2,14 +2,17 @@ import { FormEvent, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { useRoom } from '../hooks/useRoom';
-import { Button } from '../components/Button';
-import { RoomCode } from '../components/RoomCode';
+import { Button } from '../components/Button/Button';
+import { RoomCode } from '../components/RoomCode/RoomCode';
+import { ToggleTheme } from '../components/ToggleTheme/index';
 import { Question } from '../components/Question/index';
 import { database } from '../services/firebase';
+import { useTheme } from '../hooks/useTheme';
 
 import logoImg from '../assets/images/logo.svg';
 
 import '../styles/room.scss';
+import cx from 'classnames';
 
 type RoomParams = {
   id: string;
@@ -20,6 +23,7 @@ export function Room() {
   const params = useParams<RoomParams>();
   const roomId = params.id;
   const { title, questions } = useRoom(roomId);
+  const { theme } = useTheme();
   
   const [newQuestion, setNewQuestion] = useState('');
 
@@ -61,10 +65,15 @@ export function Room() {
 
   return (
     <div id="page-room">
-      <header>
-        <div className="content">
+      <header className={cx(
+        { dark: theme==='dark' }
+      )}>
+        <div className={'content'}>
           <img src={logoImg} alt="" />
-          <RoomCode code={roomId}/>
+          <div>
+            <ToggleTheme />
+            <RoomCode code={roomId}/>
+          </div>
         </div>
       </header>
 
@@ -75,7 +84,8 @@ export function Room() {
         </div>
 
         <form onSubmit={handleSendQuestion}>
-          <textarea 
+          <textarea
+            className={`${theme==='dark'?'dark' : ''}`} 
             placeholder="O que você quer perguntar?"
             onChange={event => setNewQuestion(event.target.value)}
             value={newQuestion}
