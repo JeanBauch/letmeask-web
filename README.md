@@ -35,12 +35,12 @@
 - [x] Styled Components
 
 <div style="display: inline_block" align="center"><br>
-  <img align="center" alt="telaMobile" width="15%" src=".github/images/img-01.png">
-  <img align="center" alt="telaMobile" width="15%" src=".github/images/img-02.png">
-  <img align="center" alt="telaMobile" width="15%" src=".github/images/img-03.png">
-  <img align="center" alt="telaMobile" width="15%" src=".github/images/img-04.png">
-  <img align="center" alt="telaMobile" width="15%" src=".github/images/img-05.png">
-  <img align="center" alt="telaMobile" width="15%" src=".github/images/img-06.png">
+  <img align="center" alt="telaMobile" width="16%" src=".github/images/img-01.png">
+  <img align="center" alt="telaMobile" width="16%" src=".github/images/img-02.png">
+  <img align="center" alt="telaMobile" width="16%" src=".github/images/img-03.png">
+  <img align="center" alt="telaMobile" width="16%" src=".github/images/img-04.png">
+  <img align="center" alt="telaMobile" width="16%" src=".github/images/img-05.png">
+  <img align="center" alt="telaMobile" width="16%" src=".github/images/img-06.png">
 </div>
 
 ## ✨ Tecnologias
