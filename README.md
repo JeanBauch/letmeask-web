@@ -20,12 +20,18 @@
 <img alt="letmeask" title="letmeask" src="src/assets/images/github02.png" />
 
 - [x] Tela de Login com o google/auth firebase
+- [x] Criar perguntas com o realDataBase do firebase
 - [x] Tela de criação da sala após auth.
 - [x] Tela da sala - visão de outros usuários.
-- [ ] Tela da sala - visão do adm.
+- [x] Tela da sala - visão do adm.
 - [x] Atualização de novas perguntas publicadas/ consumo do RealDataBase do Firebase
-- [ ] Permissões do adm sobre as perguntas do usuário 
+- [x] Permissões do adm sobre as perguntas do usuário 
 - [x] Permissões do usuário dentro da sala
+
+## Plus para o próximo passo
+- [x] Responsividade - mobile
+- [x] Tema Dark
+- [x] Styled Components
 
 ## ✨ Tecnologias
 
@@ -34,6 +40,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Firebase](https://firebase.google.com)
+- [scss](https://sass-lang.com)
 
 ## 💻 Projeto
 
