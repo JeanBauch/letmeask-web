@@ -16,8 +16,9 @@
 
 ## Features
 
-<img alt="letmeask" title="letmeask" src="src/assets/images/github01.png" />
-<img alt="letmeask" title="letmeask" src="src/assets/images/github02.png" />
+<p align="center">
+  <img alt="LetMeAskGIF" src=".github/images/GIF - letmeask.gif" width="100%">
+</p>
 
 - [x] Tela de Login com o google/auth firebase
 - [x] Criar perguntas com o realDataBase do firebase
@@ -32,6 +33,15 @@
 - [x] Responsividade - mobile
 - [x] Tema Dark
 - [x] Styled Components
+
+<div style="display: inline_block" align="center"><br>
+  <img align="center" alt="telaMobile" height="200" width="200" src=".github/images/img-01.png">
+  <img align="center" alt="telaMobile" height="200" width="200" src=".github/images/img-02.png">
+  <img align="center" alt="telaMobile" height="200" width="200" src=".github/images/img-03.png">
+  <img align="center" alt="telaMobile" height="200" width="200" src=".github/images/img-04.png">
+  <img align="center" alt="telaMobile" height="200" width="200" src=".github/images/img-05.png">
+  <img align="center" alt="telaMobile" height="200" width="200" src=".github/images/img-06.png">
+</div>
 
 ## ✨ Tecnologias
 

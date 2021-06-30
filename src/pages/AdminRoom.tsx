@@ -1,6 +1,9 @@
 import { useHistory, useParams } from 'react-router-dom';
+import { database } from '../services/firebase';
 // import { useAuth } from '../hooks/useAuth';
 import { useRoom } from '../hooks/useRoom';
+import { useTheme } from '../hooks/useTheme';
+
 import { Button } from '../components/Button/Button';
 import { RoomCode } from '../components/RoomCode/RoomCode';
 import { Question } from '../components/Question/index';
@@ -10,8 +13,7 @@ import logoImg from '../assets/images/logo.svg';
 import deleteImg from '../assets/images/delete.svg';
 import checkImg from '../assets/images/check.svg';
 import answerImg from '../assets/images/answer.svg';
-import { database } from '../services/firebase';
-import { useTheme } from '../hooks/useTheme';
+import emptyImg from '../assets/images/empty-questions.svg';
 
 import '../styles/room.scss';
 import cx from 'classnames';
@@ -25,7 +27,7 @@ export function AdminRoom() {
   const params = useParams<RoomParams>();
   const history = useHistory();
   const roomId = params.id;
-  const { title, questions } = useRoom(roomId);
+  const { title, questions, loader } = useRoom(roomId);
   const { theme } = useTheme();
 
   async function handleEndRoom() {
@@ -72,14 +74,21 @@ export function AdminRoom() {
       <main>
         <div className="room-title">
           <h1>Sala {title}</h1>
-          { questions.length > 0 && <span>{questions.length} pergunta(s)</span> }
+          { questions.length > 0 && <span>{questions.length} pergunta(s)</span>}
         </div>
+
+        {questions.length === 0 && loader &&
+          <div className="emptyQuestions">
+            <h2>Está sala ainda não possui perguntas</h2>
+            <img src={emptyImg} alt="Está sala ainda não possui perguntas" />
+          </div>
+        }
 
         <div className="question-list">
           {questions.map( question => {
             return (
               <Question
-                key={question.id}  
+                key={question.id}
                 content={question.content}
                 author={question.author}
                 isAnswered={question.isAnswered}
@@ -111,7 +120,6 @@ export function AdminRoom() {
             )
           } )}
         </div>
-        
       </main>
     </div>
   );

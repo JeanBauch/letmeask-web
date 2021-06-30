@@ -59,6 +59,18 @@
       }
     }
 
+    .emptyQuestions{
+      margin-top: 6rem;
+      display: flex;
+      gap: 32px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        color: #835afd;
+      }
+    }
+
     form {
       textarea {
         width: 100%;
@@ -149,6 +161,11 @@
     main {
       .room-title{
         justify-content: center;
+      }
+      .emptyQuestions{
+        h2 {
+          font-size: 1.25rem;
+        }
       }
       .question-list {
         padding: 0 1rem;
